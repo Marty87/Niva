@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Article</title>
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet"  href="css/lightslider.css"/>
+  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-migrate-1.2.1.js"></script>
+
+  <!--[if lt IE 9]>
+  <html class="lt-ie9">
+  <div style=' clear: both; text-align:center; position: relative;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/..">
+      <img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."/>
+    </a>
+  </div>
+  <script src="js/html5shiv.js"></script>
+  <![endif]-->
+
+  <script src='js/device.min.js'></script>
+
+</head>
+<body>
+<div class="page">
+
+
+  <!--========================================================
+                            HEADER
+  =========================================================-->
+  <header class="header">
+    <nav class="header__nav top-nav">
+      <div class="container col-sm-pd-0">
+            <ul class="sf-menu hide-xs">
+              <li class="sf-menu__item sf-menu__active">
+                <a href="#" class="sf-menu__item--link sf-menu__active--link"><span class="icon icon-1"></span>Главная</a>
+              </li>
+              <li class="sf-menu__item">
+                 <a href="index-1.html" class="sf-menu__item--link"><span class="icon icon-2"></span> О компании <span class="icon arrow"></span></a>
+                <ul class="submenu">
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">Наши преимущества</a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">Наша команда</a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">Клиенты</a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">Проекты</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="sf-menu__item">
+                <a href="index-2.html" class="sf-menu__item--link"><span class="icon icon-3"></span> Оплата и доставка <span class="icon arrow"></span></a>
+              </li>
+              <li class="sf-menu__item">
+                <a href="index-3.html" class="sf-menu__item--link"><span class="icon icon-4"></span> Полезная информация<span class="icon arrow"></span></a>
+              </li>
+              <li class="sf-menu__item">
+                <a href="index-4.html" class="sf-menu__item--link"><span class="icon icon-5"></span>Контакты</a>
+              </li>
+            </ul>
+          <button class="topmain-btn hide-xs"><span class="icon icon-6"></span>Вход <span class="hide-sm">в личный кабинет</span></button>
+
+        <div class="mobile-top-nav visible-xs">
+          <button class="toggle-menu"></button>
+            <img src="images/logo-mini.jpg" alt="logo" class="mobi-logo">
+            <ul class="menu-icon">
+              <li><a href="#" class="mini-1"></a></li>
+              <li><a href="#" class="mini-2"></a></li>
+              <li><a href="#" class="mini-3"></a></li>
+            </ul>
+         </div>
+          <div class="mobile-header__more" id="more">
+            <ul class="mobile-header__menu">
+              <li>
+                <a href="#"><span class="icon icon-1"></span>Главная</a>
+              </li>
+              <li>
+                <a href="#"><span class="icon icon-2"></span>О компании<span class="icon arrow"></span></a>
+              </li>
+              <li>
+                <a href="#"><span class="icon icon-3"></span>Оплата и доставка<span class="icon arrow"></span></a>
+              </li>
+              <li>
+                <a href="#"><span class="icon icon-4"></span>Полезная информация<span class="icon arrow"></span></a>
+              </li>
+                <li>
+                <a href="#"><span class="icon icon-5"></span>Контакты</a>
+              </li>
+            </ul>
+          </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="top-main hide-xs">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <div class="brand">
+              <h1 class="brand__name">
+                <a class="brand__name--link"  href="#">
+                  <img src="images/logo.png" alt="img">
+                </a>
+              </h1>
+            </div>
+          </div>
+          <div class="col-xs-5 col-sm-4 col-md-5 col-lg-5 col-w-sm-30">
+            <form class="search-form" action="search.php" method="GET" accept-charset="utf-8">
+              <label class="search-form_label">
+                <input class="search-form_input" type="text" name="s" autocomplete="off" placeholder="Поиск по сайту"/>
+              </label>
+              <button class="search-form_submit" type="submit"></button>
+            </form>
+          </div>
+          <div class="col-xs-4 col-sm-5 col-md-4 col-lg-4 pd-l-0 col-w-sm-45">
+            <div class="price-box">
+              <div class="price-box-aside">
+                <img src="images/price-icon.png" alt="img">
+              </div>
+              <div class="price-box-cnt">
+                <span>Прайс лист</span>
+                <a href="#">Скачать</a>
+              </div>
+            </div>
+            <div class="contact-box header-contacts">
+              <a href="callto:" class="contact-tel">8 800 554-66-44 </a>
+              <a href="mailto:" class="contact-meil">info@nivaperm.ru</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="stuck_container" class="stuck_container">
+    <ul class="bottom-nav">
+      <div class="container col-sm-pd-0">
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+              <span class="bigmack hide-xs"></span>Каталог товаров
+              <span class="caret-down"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <ul class="container">
+                <li class="row">
+                  <ul class="col-xs-4 col-sm-4 col-md-4 col-lg-4 dropdown-cnt">
+                    <li><a href="#"><img src="images/product01.jpg" alt="img"><span>Баки мембранные,емкости</span></a></li>
+                    <li><a href="#"><img src="images/product01.jpg" alt="img"><span>Баки мембранные,емкости</span></a></li>
+                    <li><a href="#"><img src="images/product01.jpg" alt="img"><span>Баки мембранные,емкости</span></a></li>
+                    <li><a href="#"><img src="images/product01.jpg" alt="img"><span>Баки мембранные,емкости</span></a></li>
+                    <li><a href="#"><img src="images/product01.jpg" alt="img"><span>Баки мембранные,емкости</span></a></li>
+                    <li><a href="#"><img src="images/product01.jpg" alt="img"><span>Баки мембранные,емкости</span></a></li>
+                  </ul>
+                  <ul class="col-xs-4 col-sm-4 col-md-4 col-lg-4 dropdown-cnt">
+                    <li><a href="#"><img src="images/product02.jpg" alt="img"><span>Водонагреватели</span></a></li>
+                    <li><a href="#"><img src="images/product02.jpg" alt="img"><span>Водонагреватели</span></a></li>
+                    <li><a href="#"><img src="images/product02.jpg" alt="img"><span>Водонагреватели</span></a></li>
+                    <li><a href="#"><img src="images/product02.jpg" alt="img"><span>Водонагреватели</span></a></li>
+                    <li><a href="#"><img src="images/product02.jpg" alt="img"><span>Водонагреватели</span></a></li>
+                    <li><a href="#"><img src="images/product02.jpg" alt="img"><span>Водонагреватели</span></a></li>
+                  </ul>
+                  <ul class="col-xs-4 col-sm-4 col-md-4 col-lg-4 dropdown-cnt">
+                    <li><a href="#"><img src="images/product03.jpg" alt="img"><span>Вспомогательные материалы</span></a></li>
+                    <li><a href="#"><img src="images/product03.jpg" alt="img"><span>Вспомогательные материалы</span></a></li>
+                    <li><a href="#"><img src="images/product03.jpg" alt="img"><span>Вспомогательные материалы</span></a></li>
+                    <li><a href="#"><img src="images/product03.jpg" alt="img"><span>Вспомогательные материалы</span></a></li>
+                    <li><a href="#"><img src="images/product03.jpg" alt="img"><span>Вспомогательные материалы</span></a></li>
+                    <li><a href="#"><img src="images/product03.jpg" alt="img"><span>Вспомогательные материалы</span></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </ul>
+          </li>
+          <li class="dropdown hide-xs">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+              Водоснабжение
+            <span class="caret-down"></span>
+            </a>
+            <!-- <ul class="dropdown-menu">
+              <ul class="container">
+                <li class="row">
+                  <ul class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <li><a href="#">Текст подпункта</a></li>
+                    <li><a href="#">Текст подпункта</a></li>
+                    <li><a href="#">Текст подпункта</a></li>
+                    <li><a href="#">Текст подпункта</a></li>
+                  </ul>
+                  <ul class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <li><a href="#">Текст подпункта</a></li>
+                    <li><a href="#">Текст подпункта</a></li>
+                    <li><a href="#">Текст подпункта</a></li>
+                    <li><a href="#">Текст подпункта</a></li>
+                  </ul>
+                  <ul class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <li><a href="#">Текст подпункта</a></li>
+                    <li><a href="#">Текст подпункта</a></li>
+                    <li><a href="#">Текст подпункта</a></li>
+                    <li><a href="#">Текст подпункта</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </ul> -->
+          </li>
+          <li class="dropdown hide-xs">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+              Отопление
+            <span class="caret-down"></span>
+            </a>
+          </li>
+          <li class="dropdown hide-xs">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+              Водоотведение
+            <span class="caret-down"></span>
+            </a>
+          </li>
+          <li class="dropdown hide-xs">
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                Сантехника
+              <span class="caret-down"></span>
+              </a>
+          </li>
+            <li><a href="#" class="sale-clr hide-sm">Рапродажа</a></li>
+            <li><a href="#" class="shares-clr hide-sm">Акции</a></li>
+          <div class="basket-box hide-xs">
+            <div class="basket-box-icon"></div>
+            <div class="basket-box-cnt hide-sm">
+              <span>22 шт.</span>
+              <span>127 500 р.</span>
+            </div>
+          </div>
+          <div class="basket-box-2 visible-xs">
+            <div class="basket-box-icon-2"></div>
+            <div class="basket-box-cnt">
+                <span>22 шт. / 127 500 р.</span>
+             </div>
+          </div>
+        </div>
+      </ul>
+    </div>
+</header>
+  <!--========================================================
+                            CONTENT
+  =========================================================-->
+    <main class="main">
+      <section class="well well__05 bg-secondary">
+        <div class="container">
+          <div class="breadcrumbs">
+            <ul>
+              <li><a class="prevCrumb" href="index.html">Главная</a></li>
+              <li><span class="arwCrumb">/</span></li>
+              <li><a class="currentCrumb" href="#">Полезные статьи</a></li>
+            </ul>
+          </div>
+          <div class="title"><h2>Полезные статьи</h2></div>
+            <div class="row">
+              <article class="article">
+                <div class="col-xs-5 col-sm-4 col-md-4 col-lg-3 article-aside">
+                  <div class="img">
+                    <img src="images/article-medium.jpg" alt="img">
+                  </div>
+                  <div class="img-2">
+                    <img src="images/article-small.jpg" alt="img">
+                  </div>
+                </div>
+                <div class="col-xs-7 col-sm-8 col-md-8 col-lg-9 article-cnt">
+                  <h4>Новые умывальники по старым ценам</h4>
+                  <p>Покупка сантехники — важнейшая часть обустройства любого дома. <span>Ведь именно от систем водоснабжения и водоотведения во многом зависит комфорт проживания. Столкнувшись с необходимостью купить сантехнику в Перми, многие люди испытывают оправданное беспокойство по поводу того, что для поиска нужных товаров придется обойти десяток торговых центров.</span></p>
+                  <a href="more-link" class="more-link text-2">Подробнее</a>
+                </div>
+              </article>
+              <article class="article">
+                <div class="col-xs-5 col-sm-4 col-md-4 col-lg-3 article-aside">
+                  <div class="img">
+                    <img src="images/article-medium.jpg" alt="img">
+                  </div>
+                  <div class="img-2">
+                    <img src="images/article-small.jpg" alt="img">
+                  </div>
+                </div>
+                <div class="col-xs-7 col-sm-8 col-md-8 col-lg-9 article-cnt">
+                  <h4>Новые умывальники по старым ценам</h4>
+                  <p>Покупка сантехники — важнейшая часть обустройства любого дома. <span>Ведь именно от систем водоснабжения и водоотведения во многом зависит комфорт проживания. Столкнувшись с необходимостью купить сантехнику в Перми, многие люди испытывают оправданное беспокойство по поводу того, что для поиска нужных товаров придется обойти десяток торговых центров.</span></p>
+                  <a href="more-link" class="more-link text-2">Подробнее</a>
+                </div>
+              </article>
+              <article class="article">
+                <div class="col-xs-5 col-sm-4 col-md-4 col-lg-3 article-aside">
+                  <div class="img">
+                    <img src="images/article-medium.jpg" alt="img">
+                  </div>
+                  <div class="img-2">
+                    <img src="images/article-small.jpg" alt="img">
+                  </div>
+                </div>
+                <div class="col-xs-7 col-sm-8 col-md-8 col-lg-9 article-cnt">
+                  <h4>Новые умывальники по старым ценам</h4>
+                  <p>Покупка сантехники — важнейшая часть обустройства любого дома. <span>Ведь именно от систем водоснабжения и водоотведения во многом зависит комфорт проживания. Столкнувшись с необходимостью купить сантехнику в Перми, многие люди испытывают оправданное беспокойство по поводу того, что для поиска нужных товаров придется обойти десяток торговых центров.</span></p>
+                  <a href="more-link" class="more-link text-2">Подробнее</a>
+                </div>
+              </article>
+              <div class="col-xs-12">
+                <nav class="pagination pagination-offset">
+                  <ul class="pagination-list push-left">
+                    <li class="first"><a href="#" class="first-link"></a></li>
+                    <li class="pagination-list__item current"><a href="#" class="pagination-list__item--link">1</a></li>
+                    <li class="pagination-list__item"><a href="#" class="pagination-list__item--link">2</a></li>
+                    <li class="pagination-list__item"><a href="#" class="pagination-list__item--link">3</a></li>
+                    <li class="pagination-list__item"><a href="#" class="pagination-list__item--link">4</a></li>
+                    <li class="pagination-list__item"><a href="#" class="pagination-list__item--link">5</a></li>
+                    <li class="last"><a href="#" class="last-link"></a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="well__04 bg-secondary2">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-8 col-sm-8 col-md-9 col-lg-9 hide-xs">
+                <div class="foot-main">
+                  <ul class="foot-main-list">
+                   <h4>Каталог товаров</h4>
+                    <li><a href="#">Вся продукция</a></li>
+                    <li><a href="#">Водоснабжения</a></li>
+                    <li><a href="#">Оторпление</a></li>
+                    <li><a href="#">Водоотведение</a></li>
+                    <li><a href="#">Сантехника</a></li>
+                  </ul>
+                  <ul class="foot-main-list">
+                    <h4>О компании</h4>
+                      <li><a href="#">О компании</a></li>
+                      <li><a href="#">Наши преимущества</a></li>
+                      <li><a href="#">Наша команда</a></li>
+                      <li><a href="#">Проекты</a></li>
+                  </ul>
+                  <ul class="foot-main-list">
+                    <h4>Оплата и доставка</h4>
+                      <li><a href="#">Доставка</a></li>
+                      <li><a href="#">Оплата</a></li>
+                      <li><a href="#">Заказ</a></li>
+                  </ul>
+                  <ul class="foot-main-list">
+                    <h4>Полезная информации</h4>
+                      <li><a href="#">Новости</a></li>
+                      <li><a href="#">Полезные статьи</a></li>
+                      <li><a href="#">Как сделать заказ</a></li>
+                      <li><a href="#">Сертификаты</a></li>
+                      <li><a href="#">Публичная оферта</a></li>
+                      <li><a href="#">Распродажа</a></li>
+                      <li><a href="#">Акции</a></li>
+                    </ul>
+                </div>
+              </div>
+              <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3 hide-xs">
+                <div class="contact-box">
+                    <h4>Контакты</h4>
+                    <a href="callto:" class="contact-tel">8 800 554-66-44 </a>
+                    <a href="mailto:" class="contact-meil">info@nivaperm.ru</a>
+                    <div class="timing">
+                      <span>
+                        с пн. по пт. С 9.00 до 18.00
+                      </span>
+                    </div>
+                    <ul class="social-list">
+                       <li class="social-list__item"><a href="#" class="social-list__item--item icon1"></a></li>
+                       <li class="social-list__item"><a href="#" class="social-list__item--item icon2"></a></li>
+                       <li class="social-list__item"><a href="#" class="social-list__item--item icon3"></a></li>
+                       <li class="social-list__item"><a href="#" class="social-list__item--item icon4"></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            <ul class="foot-main-list visible-xs">
+                <li><a href="#">Каталог товаров</a></li>
+                <li><a href="#">Полезная информация</a></li>
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Оплата и доставка</a></li>
+            </ul>
+            <div class="contact-box visible-xs">
+              <h4>Контакты</h4>
+              <a href="callto:" class="contact-tel">8 800 554-66-44 </a>
+              <a href="mailto:" class="contact-meil">info@nivaperm.ru</a>
+              <ul class="social-list">
+                 <li class="social-list__item"><a href="#" class="social-list__item--item icon1"></a></li>
+                 <li class="social-list__item"><a href="#" class="social-list__item--item icon2"></a></li>
+                 <li class="social-list__item"><a href="#" class="social-list__item--item icon3"></a></li>
+                 <li class="social-list__item"><a href="#" class="social-list__item--item icon4"></a></li>
+              </ul>
+              <div class="designed">
+                <span>Разработано: <a href="#">REKOON</a></span>
+              </div>
+            </div>
+          </div>
+        </section>
+</main>
+<!--========================================================
+                            FOOTER
+  =========================================================-->
+   <footer class="footer">
+    <div class="container">
+      <div class="copyright"><span>© 2016. НИВА. Все права защищены. Политика конфиденциальности</span></div>
+      <div class="designed hide-xs">
+        <span>Разработано: <a href="#">REKOON</a></span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

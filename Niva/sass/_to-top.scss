@@ -1,0 +1,35 @@
+/*==================     ToTop     ======================*/
+.toTop {
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  line-height: 46px;
+  color: #7e7e7e;
+  background: #fff;
+  border-radius: 50%;
+  @include box-shadow(4px 4px 8px 0 rgba(#000, .4));
+  @include transition(0.3s);
+
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+
+  display: none;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  z-index: 20;
+
+  &:hover {
+    @include transition(0.3s);
+    background: darken(#fff,15%);
+    text-decoration: none;
+  }
+}
+
+.mobile .toTop,
+.tablet .toTop{
+	display: none!important;
+}
+
+

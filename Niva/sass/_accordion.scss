@@ -1,0 +1,252 @@
+/*==================   Accordion    ======================*/
+.accordion {
+  background: #FFF;
+  border: 1px solid #dfdfdf;
+  border-top: none;
+  @include transition(0.3s);
+  -webkit-border-bottom-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+
+  &:hover {
+   @include transition(0.3s);
+   @include box-shadow(0 0 15px rgba(0, 0, 0, 0.1));
+  }
+}
+
+.accordion_title {
+  color:$secondary;
+  padding: 15px 7%;
+  font-size: 14px;
+  font-family: $default-font;
+
+  &:hover {
+
+    // background: $accent-clr2;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+}
+
+.accordion_cnt {
+
+  ul {
+
+    li {
+
+      a {
+        color:$secondary;
+        display: block;
+        padding: 15px 7%;
+        font-size: 12px;
+        font-family: $default-font;
+        @include transition(0.3s);
+
+        &:hover {
+          @include transition(0.3s);
+          background: $accent-clr2;
+        }
+      }
+    }
+  }
+}
+
+.ui-accordion-header {
+  position: relative;
+  cursor: pointer;
+
+  &:after {
+    content:"";
+    position: absolute;
+    top: 39%;
+    right: 4%;
+    display: block;
+    width: 8px;
+    height: 5px;
+    background: url('../images/arrow-bottom.png') 0 0 no-repeat;
+  }
+
+  &-active:after {
+      content:"";
+      position: absolute;
+      top: 39%;
+      right: 4%;
+      display: block;
+      width: 8px;
+      height: 5px;
+      background: url('../images/arrow-up.png') 0 0 no-repeat;
+  }
+}
+
+.accordion-inner {
+  font-size: 12px;
+  font-family: $default-font;
+  color:$secondary;
+
+  .accordion_cnt {
+
+    ul {
+
+      li {
+
+        a {
+
+          display: block;
+
+
+          &:hover {
+            color:$accent-clr3;
+             background: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.title-inner {
+  padding: 15px 7%;
+
+   &:focus {
+    outline: none;
+  }
+}
+
+.order-accordion {
+  @include border-radius(5px);
+  border: 1px solid $secondary5;
+  border-bottom: none;
+
+  .ui-accordion-header {
+
+      &:after {
+        display: none;
+      }
+  }
+
+  .ui-accordion-header-active {
+    border-bottom: none;
+    outline: none;
+  }
+
+  .btn-2 {
+    float: right;
+     margin-top: 20px;
+  }
+}
+
+.order-title {
+  background: $secondary;
+  padding: 9px 20px;
+  @include transition(0.3s);
+  color:$default;
+  border-bottom: 1px solid $default;
+
+   span {
+        vertical-align: middle;
+    }
+
+    &:hover {
+        background: $accent-clr2;
+
+
+      span {
+         @include transition(0.3s);
+          color:$secondary;
+      }
+
+      .circle {
+            @include transition(0.3s);
+            color:$secondary;
+            border: 1px solid $secondary;
+      }
+    }
+  }
+
+.first-title {
+      -webkit-border-top-left-radius: 5px;
+      border-top-left-radius: 5px;
+      -webkit-border-top-right-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+.last-title {
+    -webkit-border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.order-cnt {
+
+}
+
+// Certificate - thumbs gallery
+
+.certificate-accordion {
+  margin-top: 45px;
+
+  .ui-accordion-header-active {
+      &:before {
+      content:"-";
+      // position: absolute;
+      left: 0;
+      bottom: 0;
+      text-align: center;
+      display: inline-block;
+      margin-right: 10px;
+      width: 32px;
+      height: 32px;
+      font:18px/30px $font;
+      color:$secondary;
+      background-color: #fbc904;
+      @include border-radius(50%);
+    }
+}
+
+
+}
+
+.certificate-title {
+  text-transform: uppercase;
+  font:16px/1.2 $default-font;
+  text-decoration: underline;
+  position: relative;
+
+  &:after {
+    display: none;
+  }
+
+  &:before {
+    content:"+";
+    // position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    display: inline-block;
+    margin-right: 10px;
+    width: 32px;
+    height: 32px;
+    font:18px/30px $font;
+    color:$secondary;
+    background-color: #fbc904;
+    @include border-radius(50%);
+  }
+}
+
+.certificate-content {
+  @include clearfix();
+  // padding: 20px 0;
+}
+
+.thumb-cnt {
+  margin: 20px 0;
+}
+
+.certificate-content + * {
+  margin-top: 20px;
+}

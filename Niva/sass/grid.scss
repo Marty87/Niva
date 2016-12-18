@@ -1,0 +1,429 @@
+@import "_normalize.scss";
+@import "_mixins.scss";
+
+//
+// Grid system
+// --------------------------------------------------
+
+$grid-columns: 12;
+$grid-gutter-width: 20px;
+
+$container-xs: 300px;
+$container-sm: 730px + $grid-gutter-width;
+$container-md: 945px + $grid-gutter-width;
+$container-lg: 1155px + $grid-gutter-width;
+
+$screen-xs-min: 480px;
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+@mixin container-fixed($gutter: $grid-gutter-width) {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: ($gutter / 2);
+  padding-right: ($gutter / 2);
+  @include clearfix;
+}
+
+@mixin make-row($gutter: $grid-gutter-width) {
+  margin-left: ceil(($gutter / -2));
+  margin-right: floor(($gutter / -2));
+  @include clearfix;
+}
+
+@mixin make-grid-columns($i: 1, $list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}") {
+  @for $i from (1 + 1) through $grid-columns {
+    $list: "#{$list}, .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}";
+  }
+  #{$list} {
+    min-height: 1px;
+    padding-left: ceil(($grid-gutter-width / 2));
+    padding-right: floor(($grid-gutter-width / 2));
+  }
+}
+
+@mixin float-grid-columns($class, $i: 1, $list: ".col-#{$class}-#{$i}") {
+  @for $i from (1 + 1) through $grid-columns {
+    $list: "#{$list}, .col-#{$class}-#{$i}";
+  }
+  #{$list} {
+    float: left;
+  }
+}
+
+@mixin calc-grid-column($index, $class, $type) {
+  @if ($type == width) and ($index > 0) {
+    .col-#{$class}-#{$index} {
+      width: percentage(($index / $grid-columns));
+    }
+  }
+  @if ($type == push) and ($index > 0) {
+    .col-#{$class}-push-#{$index} {
+      left: percentage(($index / $grid-columns));
+    }
+  }
+  @if ($type == push) and ($index == 0) {
+    .col-#{$class}-push-0 {
+      left: auto;
+    }
+  }
+  @if ($type == pull) and ($index > 0) {
+    .col-#{$class}-pull-#{$index} {
+      right: percentage(($index / $grid-columns));
+    }
+  }
+  @if ($type == pull) and ($index == 0) {
+    .col-#{$class}-pull-0 {
+      right: auto;
+    }
+  }
+  @if ($type == offset) {
+    .col-#{$class}-offset-#{$index} {
+      margin-left: percentage(($index / $grid-columns));
+    }
+  }
+}
+
+@mixin loop-grid-columns($columns, $class, $type) {
+  @for $i from 0 through $columns {
+    @include calc-grid-column($i, $class, $type);
+  }
+}
+
+@mixin make-grid($class) {
+  @include float-grid-columns($class);
+  @include loop-grid-columns($grid-columns, $class, width);
+  @include loop-grid-columns($grid-columns, $class, offset);
+}
+
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+.container {
+  @include container-fixed($grid-gutter-width);
+  min-width: $container-xs;
+
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
+}
+
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+
+.container-fluid {
+  @include container-fixed;
+}
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+
+.row {
+  @include make-row;
+}
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+@include make-grid-columns;
+
+// Extra small grid
+//
+// Columns, offsets, pushes, and pulls for extra small devices like
+// smartphones.
+
+@media (min-width: $screen-xs-min) {
+  @include make-grid(xs);
+
+  .col-xs-clear{
+    clear: left;
+  }
+
+  .col-xs-release{
+    clear: none;
+  }
+}
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (min-width: $screen-sm-min) {
+  @include make-grid(sm);
+
+  .col-sm-clear{
+    clear: left;
+  }
+
+  .col-sm-release{
+    clear: none;
+  }
+}
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+
+@media (min-width: $screen-md-min) {
+  @include make-grid(md);
+
+  .col-md-clear{
+    clear: left;
+  }
+
+  .col-md-release{
+    clear: none;
+  }
+}
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: $screen-lg-min) {
+  .col-lg-clear{
+    clear: left;
+  }
+
+  .col-lg-release{
+    clear: none;
+  }
+
+  @include make-grid(lg);
+}
+
+.pd-0 {
+  padding: 0 ;
+}
+
+.pd-l-0 {
+  padding-left: 0;
+}
+ .pd-l-5 {
+    padding-left: 5px;
+ }
+  .pd-l-10 {
+    padding-left: 10px;
+ }
+  .pd-l-15 {
+    padding-left: 15px;
+ }
+  .pd-l-20 {
+    padding-left: 20px;
+ }
+  .pd-l-25 {
+    padding-left: 25px;
+ }
+  .pd-l-30 {
+    padding-left: 30px;
+ }
+  .pd-l-35 {
+    padding-left: 35px;
+ }
+  .pd-l-40 {
+    padding-left: 40px;
+ }
+  .pd-l-45 {
+    padding-left: 45px;
+ }
+  .pd-l-50 {
+    padding-left: 50px;
+ }
+  .pd-l-55 {
+    padding-left: 55px;
+ }
+  .pd-l-60 {
+    padding-left: 60px;
+ }
+  .pd-l-65 {
+    padding-left: 65px;
+ }
+  .pd-l-70 {
+    padding-left: 70px;
+ }
+  .pd-l-75 {
+    padding-left: 75px;
+ }
+  .pd-l-80 {
+   padding-left: 80px;
+ }
+  .pd-l-85 {
+    padding-left: 85px;
+ }
+  .pd-l-90 {
+    padding-left: 90px;
+ }
+  .pd-l-95 {
+    padding-left: 95px;
+ }
+  .pd-l-100 {
+    padding-left: 100px;
+ }
+
+
+.pd-r-0 {
+  padding-right: 0 !important;
+}
+  .pd-r-5 {
+    padding-right: 5px;
+ }
+  .pd-r-10 {
+    padding-right: 10px;
+ }
+  .pd-r-15 {
+    padding-right: 15px;
+ }
+  .pd-r-20 {
+    padding-right: 20px;
+ }
+  .pd-r-25 {
+    padding-right: 25px;
+ }
+  .pd-r-30 {
+    padding-right: 30px;
+ }
+  .pd-r-35 {
+    padding-right: 35px;
+ }
+  .pd-r-40 {
+    padding-right: 40px;
+ }
+  .pd-r-45 {
+    padding-right: 45px;
+ }
+  .pd-r-50 {
+    padding-right: 50px;
+ }
+  .pd-r-55 {
+    padding-right: 55px;
+ }
+  .pd-r-60 {
+    padding-right: 60px;
+ }
+  .pd-r-65 {
+    padding-right: 65px;
+ }
+  .pd-r-70 {
+    padding-right: 70px;
+ }
+  .pd-r-75 {
+    padding-right: 75px;
+ }
+  .pd-r-80 {
+   padding-right: 80px;
+ }
+  .pd-r-85 {
+    padding-right: 85px;
+ }
+  .pd-r-90 {
+    padding-right: 90px;
+ }
+  .pd-r-95 {
+    padding-right: 95px;
+ }
+  .pd-r-100 {
+    padding-right: 100px;
+ }
+
+ .col-w-5 {
+    width: 5%;
+ }
+  .col-w-10 {
+    width: 10%;
+ }
+  .col-w-15 {
+    width: 15%;
+ }
+  .col-w-20 {
+    width: 20%;
+ }
+  .col-w-25 {
+    width: 25%;
+ }
+  .col-w-30 {
+    width: 30%;
+ }
+
+.col-w-32 {
+    width: 32%;
+ }
+
+.col-w-35 {
+    width: 35%;
+ }
+
+.col-w-38 {
+    width: 38%;
+ }
+
+.col-w-40 {
+    width: 40%;
+ }
+
+.col-w-48 {
+    width: 48%;
+    float: left;
+}
+.col-w-49 {
+    width: 49%;
+    float: left;
+}
+.col-w-45 {
+    width: 45%;
+}
+.col-w-50 {
+    width: 50%;
+}
+.col-w-55 {
+    width: 55%;
+}
+
+.col-w-60 {
+    width: 60%;
+ }
+
+  .col-w-64 {
+    width: 64%;
+ }
+  .col-w-65 {
+    width: 65%;
+ }
+  .col-w-70 {
+    width: 70%;
+ }
+  .col-w-75 {
+    width: 75%;
+ }
+  .col-w-80 {
+    width: 80%;
+ }
+  .col-w-85 {
+    width: 85%;
+ }
+  .col-w-90 {
+    width: 90%;
+ }
+  .col-w-95 {
+    width: 95%;
+ }
+  .col-w-100 {
+    width: 100%;
+ }
+
+
+
+
+
