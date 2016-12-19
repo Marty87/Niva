@@ -48,11 +48,9 @@ h4 {
     font-size: 16px;
 }
 
-// h5 {
-//     font-size: 20px;
-//     line-height: 24px;
-//     font-weight: bold;
-// }
+ h5 {
+    font-size: 14px;
+}
 
 // h6{
 //     font-size: 17px;
@@ -239,6 +237,7 @@ dl {
     margin-right: 10px;
     width: 16px;
     height: 16px;
+    @include transition(0.3s);
 }
 
 .arrow {
@@ -295,6 +294,38 @@ dl {
 
 .icon-5 {
    background: url('../images/top-menu-icon5.png')0 0 no-repeat;
+}
+
+
+.sf-menu__item {
+
+    &:hover {
+
+       .icon-1 {
+            @include transition(0.3s);
+            background: url('../images/top-menu-icon1-hover.png')0 0 no-repeat;
+        }
+
+        .icon-2 {
+            @include transition(0.3s);
+            background: url('../images/top-menu-icon2-hover.png')0 0 no-repeat;
+        }
+
+        .icon-3 {
+            @include transition(0.3s);
+            background: url('../images/top-menu-icon3-hover.png')0 0 no-repeat;
+        }
+
+        .icon-4 {
+            @include transition(0.3s);
+            background: url('../images/top-menu-icon4-hover.png')0 0 no-repeat;
+        }
+
+        .icon-5 {
+            @include transition(0.3s);
+            background: url('../images/top-menu-icon5-hover.png')0 0 no-repeat;
+        }
+    }
 }
 
 .bottom-nav {
@@ -586,7 +617,7 @@ dl {
     max-height: 420px;
     background: $secondary;
     border: 1px solid #dfdfdf;
-    @include border-radius(5px);
+    @include border-radius(7px);
 
     img {
      border-top-right-radius: 5px;
@@ -595,9 +626,9 @@ dl {
 }
 
 .banner-descr {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    // position: absolute;
+    // bottom: 0;
+    // left: 0;
     background: $secondary;
     padding: 20px 15px;
     color:$default;
@@ -636,11 +667,31 @@ dl {
         @include box-shadow(0 0 15px rgba(0, 0, 0, 0.1));
         @include transition(0.5s);
     }
+
+    .del-btn {
+        margin: auto;
+        padding-top:20px;
+        clear: both;
+
+        span {
+            padding-left: 7px;
+        }
+    }
+
+    .del-btn:before {
+        width: 16px;
+        height: 16px;
+        background: url("../images/cancel-small.png") 0px 0px no-repeat;
+    }
+
+    .del-btn:hover:before {
+        background: url("../images/cancel-small-hover.png") 0px 0px no-repeat;
+    }
 }
 
 .product-cnt {
     @include clearfix();
-    padding: 15px 20px 38px;
+    padding: 0px 20px 38px;
 }
 
 .product-name {
@@ -680,6 +731,27 @@ dl {
     float: right;
     margin-top: 7px;
     width: 48%;
+}
+
+.double-price {
+    line-height: 1;
+    margin-top: 0;
+
+    span {
+        font-size: 18px;
+        line-height: 24px;
+        font-family: $font;
+        margin-top: 7px;
+    }
+}
+
+.old-price {
+    vertical-align: middle;
+    color: $secondary2;
+    font-size: 18px;
+    line-height: 1;
+    font-family: $font1 !important;
+    text-decoration: line-through;
 }
 
 .btn-info {
@@ -812,15 +884,20 @@ dl {
         text-transform: uppercase;
         line-height: 30px;
     }
- }
+}
 
  .label-1 {
     background: $accent-clr;
- }
+}
 
  .label-2 {
     background: $accent-clr3;
- }
+}
+
+ .product-2 {
+    margin: 10px 0;
+    max-height: 100%;
+}
 
 /*==================  Mount  ======================*/
 .amount {
@@ -884,6 +961,7 @@ dl {
 }
 
 /*==================  Title  ======================*/
+
 .title {
     @include clearfix();
     color:$secondary;
@@ -893,6 +971,7 @@ dl {
 }
 
 /*==================  About  ======================*/
+
 .about {
 
     p {
@@ -905,11 +984,13 @@ dl {
 }
 
 /*==================  Partners  ======================*/
+
 .partners {
     margin-top: 30px;
  }
 
 /*==================  Product-news  ======================*/
+
 .product-news {
 
     h4 {
@@ -941,6 +1022,7 @@ dl {
 }
 
 /*==================    Foot-Main     ======================*/
+
 .foot-main {
     @include clearfix();
 
@@ -1255,6 +1337,10 @@ dl {
     margin-top: 40px;
 }
 
+.offset-6 {
+    margin-top: 30px;
+}
+
 /*==================  Boxes ======================*/
 .box-2 {
 
@@ -1524,6 +1610,7 @@ dl {
         width: 8px;
         height: 5px;
         background: url('../images/arrow-bottom.png') 0 0 no-repeat;
+        @include transition(0.3s);
     }
 
    .jq-selectbox__dropdown {
@@ -1542,8 +1629,10 @@ dl {
                 color:$secondary2;
                 border-bottom: 1px solid $secondary5;
                 padding: 10px 10px;
+                @include transition(0.3s);
 
                 &:hover {
+                    @include transition(0.3s);
                     color:$secondary;
                     background: $secondary5;
                 }
@@ -1569,6 +1658,7 @@ dl {
 
 .opened {
     .jq-selectbox__trigger-arrow {
+      @include transition(0.3s);
        background: url('../images/arrow-up.png') 0 0 no-repeat;
     }
 }
@@ -1584,6 +1674,11 @@ dl {
     width: 60px;
     border: 1px solid $secondary5;
     @include border-radius(5px);
+    @include transition(0.3s);
+
+    &:hover {
+        border: 1px solid $secondary;
+    }
 }
 
 .focused {
@@ -1636,7 +1731,7 @@ dl {
     bottom: 11px;
 }
 
-.jq-number__spin:after {
+.jq-number__spin.plus:after {
     content: '';
     position: absolute;
     top: 0;
@@ -1646,9 +1741,21 @@ dl {
     background: url('../images/arrow-up.png') 0 0 no-repeat;
 }
 
+.jq-number__spin.plus:hover:after {
+    background: url('../images/down-up-red.png') 0 0 no-repeat;
+    @include transition(0.3s);
+}
+
 .jq-number__spin.minus:after {
+    @extend .jq-number__spin.plus:after;
     background: url('../images/arrow-bottom.png') 0 0 no-repeat;
 }
+
+.jq-number__spin.minus:hover:after {
+    background: url('../images/down-arrow-red.png') 0 0 no-repeat;
+    @include transition(0.3s);
+}
+
 
 .sort_count {
     .jq-number {
@@ -2708,6 +2815,209 @@ li.marked-list-item {
     margin-top: 40px;
 }
 
+
+/* ========== Table-2 ========== */
+
+.standard-table2 {
+    margin-top: 20px;
+    width: 100%;
+    border: 1px solid $secondary5;
+    background: $default;
+
+    .product {
+        max-width: 235px;
+    }
+}
+
+.standard-table2 tr:nth-child(even) {
+    background: $secondary4;
+}
+
+.standard-table2 td {
+    padding: 20px 2%;
+    border-right: 1px solid  $secondary5;
+}
+
+.standard-table2 td:last-child {
+    border-right: none;
+}
+
+.standard-table2 tr:last-child td {
+    border-bottom: none;
+}
+
+.del-btn {
+    margin-top: 15px;
+    display: block;
+    font-size: 13px;
+    line-height: 1;
+    font-family: $default-font;
+    @include transition(0.3s);
+
+    span {
+        vertical-align: middle;
+        padding-left: 10px;
+    }
+
+    &:before {
+         content:"";
+         @include transition(0.3s);
+         display:inline-block;
+         vertical-align: middle;
+         width: 24px;
+         height: 24px;
+         background:url('../images/cancel-btn.png')0px 0px no-repeat;
+    }
+
+    &:hover {
+          @include transition(0.3s);
+          color:$secondary;
+
+         &:before {
+          @include transition(0.3s);
+           background:url('../images/cancel-btn-hover.png')0px 0px no-repeat;
+         }
+    }
+}
+
+.standard-table2-small {
+    display: none;
+    // width: 100%;
+    width: 86%;
+    margin: 0 auto;
+
+    .product {
+        margin: 0;
+    }
+}
+
+.standard-table2-small td {
+    padding: 15px 10px;
+}
+
+.standard-table2-small .first-cell {
+    padding: 15px 5px 15px 0;
+}
+
+.standard-table2-small .last-cell {
+    padding: 15px 0 15px 5px;
+}
+
+
+.category-compare-mobile {
+    margin-top: 20px;
+    display: none;
+    background: $default;
+    @include border-radius(3px);
+    border: 1px solid $secondary5;
+    padding: 10px;
+    position: relative;
+    // text-align: center;
+
+    > * {
+        display: inline-block;
+        vertical-align: middle;
+        width: 33%;
+    }
+
+    .sel-cat {
+        margin-top: 0;
+    }
+
+    .del-btn {
+        position: absolute;
+        top: 33%;
+        right: 10px;
+        margin-top: 0;
+        text-align: right;
+
+        span {
+            display: none;
+        }
+    }
+}
+
+.sel-cat {
+    max-width: 200px;
+    min-width: 100px;
+    margin-top: 20px;
+
+    select {
+        display: none;
+    }
+
+    .jq-selectbox {
+        width: 100% !important;
+    }
+
+    .jq-selectbox__select {
+        font-size: 13px;
+        font-weight: 400;
+        font-family: $default-font;
+        min-width: 100%;
+        cursor: pointer;
+        vertical-align: middle;
+        border:1px solid $secondary5;
+        padding: 9px 25px 9px 10px;
+        @include border-radius(3px);
+        @include transition(0.3s);
+    }
+
+    .jq-selectbox__select-text {
+        width: auto !important;
+    }
+
+    .jq-selectbox__trigger {
+        position: absolute;
+        right: 9px;
+        top: 47%;
+    }
+
+    .jq-selectbox__trigger-arrow {
+        width: 8px;
+        height: 5px;
+        background: url('../images/arrow-bottom.png') 0 0 no-repeat;
+        @include transition(0.3s);
+    }
+
+   .jq-selectbox__dropdown {
+        top: 103%;
+        width: 100%;
+
+        ul {
+            @include border-radius(3px);
+            border: 1px solid $secondary5;
+
+            li {
+                background: #FFF;
+                font-size: 13px;
+                font-family: $default-font;
+                color:$secondary;
+                padding: 11px 10px;
+                @include transition(0.3s);
+
+                &:hover {
+                    @include transition(0.3s);
+                    background: $secondary5;
+                }
+            }
+        }
+    }
+
+    .opened {
+
+        .jq-selectbox__select {
+            @include transition(0.3s);
+            border: 1px solid $secondary;
+        }
+
+        .jq-selectbox__trigger-arrow {
+            @include transition(0.3s);
+            background: url("../images/arrow-up.png") 0 0 no-repeat;
+        }
+    }
+}
+
 /*==================    How-To Order Block    ======================*/
 
 .text-box {
@@ -2759,7 +3069,43 @@ li.marked-list-item {
     }
 }
 
+/*==================    Team    ======================*/
 
+.team-wrap {
+    // margin-top: 27px;
+}
+
+.team-title {
+    margin: 30px 0 10px ;
+    text-transform: uppercase;
+    color: #e4322c;
+}
+
+.team-box {
+    @include clearfix();
+    @include border-radius(5px);
+    margin: 10px 0;
+    background: $default;
+    border: 1px solid #dfdfdf;
+    padding: 10px 3%;
+}
+
+.team-box-aside {
+    float: left;
+}
+
+.team-box-cnt {
+    padding-left: 105px;
+
+    .text-2 {
+        margin-top: 8px;
+    }
+}
+
+.circle-image {
+    @include border-radius(50%);
+    border: 1px solid #dfdfdf;
+}
 
 /*==================    Buttons    ======================*/
 .btn {
@@ -2911,8 +3257,7 @@ li.marked-list-item {
         padding-bottom: 80px;
     }
 
-
-    @media (max-width: 767px) {
+   @media (max-width: 767px) {
         padding-top: 20px;
         padding-bottom: 20px;
     }
@@ -3037,7 +3382,7 @@ li.marked-list-item {
     li {
         display: inline-block;
 
-         a {
+        a {
             display: block;
             width: 32px;
             height: 32px;

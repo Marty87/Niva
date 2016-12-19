@@ -6,6 +6,10 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
 
+	.product-cnt {
+		    padding: 15px 20px 38px;
+	}
+
 	/**/
 }
 
@@ -22,6 +26,10 @@
           margin-top: 15px;
     	}
 	}
+
+	// .btn-1 {
+	// 	max-width: 125px;
+	// }
 }
 
 /* Medium Devices, Desktops */
@@ -239,8 +247,6 @@
 	.inner-box-cnt {
 		width: 62%;
 	}
-
-
 }
 
 /* Small Devices, Tablets */
@@ -286,6 +292,14 @@
 
 	.hide-768 {
 		display: none !important;
+	}
+
+	.team-box-cnt {
+		padding-left: 95px;
+	}
+
+	.product {
+		margin: 10px auto;
 	}
 }
 
@@ -545,12 +559,53 @@
 		 	margin-top: 15px;
         }
 	}
-
 }
 
 @media only screen and (max-width : 600px) {
+
 	.article-cnt {
 		padding-left: 11%;
+	}
+
+	.team-box-cnt {
+		padding: 0;
+		margin-top: 10px;
+	}
+
+	.team-box {
+		text-align: center;
+	}
+
+	.team-box-aside {
+		float: none;
+
+	}
+
+	.product-2 .btn-1 {
+		max-width: 100%;
+	}
+
+	.standard-table2 {
+		display: none;
+	}
+
+	.standard-table2-small {
+		display: block;
+	}
+
+	.category-compare-mobile {
+		display: block;
+	}
+
+	.standard-table2-small td {
+		padding: 15px 19%;
+	}
+}
+
+@media only screen and (max-width : 527px) {
+
+	.standard-table2-small td {
+		padding: 15px 10px;
 	}
 }
 
@@ -765,6 +820,16 @@
 	.img-box {
 		margin: 10px 0;
 	}
+
+	.col-xxs-6 {
+		float: left;
+		width: 50%;
+		padding: 0 5px;
+	}
+
+	.standard-table2-small {
+		width: 100%;
+	}
 }
 
 @media only screen and (max-width : 420px) {
@@ -784,6 +849,20 @@
 	.standard-table td {
 		padding: 20px 5px 20px 5px;
 	}
+
+	.stock .order {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+@media only screen and (max-width : 400px) {
+	.double-price {
+
+		span {
+			display: block;
+		}
+	}
 }
 
 @media only screen and (max-width : 350px) {
@@ -797,9 +876,15 @@
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
 
-.visible-cnt {
-	padding-left: 15px;
-}
+	.visible-cnt {
+		padding-left: 15px;
+	}
+
+
+	.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
 
 }
 
@@ -897,3 +982,5 @@ Multi-columns-row
 	.multi-columns-row .col-lg-1:nth-child(12n + 13) { clear: left; }
 
 }
+
+

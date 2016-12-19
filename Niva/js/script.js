@@ -400,7 +400,7 @@ include('js/lightslider.js');
 
     $(function() {
 
-      $('.catalog-block-sort input, .catalog-block-sort select,.sort_count input,.radio').styler();
+      $('.catalog-block-sort input, .catalog-block-sort select,.sort_count input,.radio, .sel-cat > select').styler();
 
     });
 })(jQuery);

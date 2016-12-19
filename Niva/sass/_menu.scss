@@ -33,9 +33,11 @@
 
     &--link {
       color:$secondary2;
+      @include transition(0.3s);
 
     &:hover {
         color: $secondary;
+        @include transition(0.3s);
 
       }
     }
@@ -48,6 +50,7 @@
   }
 
   .sfHover > a {
+    @include transition(0.3s);
     color: $secondary;
   }
 
@@ -81,12 +84,14 @@
     &--link {
       padding: 4px 0 !important;
       color: $secondary;
+       @include transition(0.3s);
     }
 
-    // &.sfHover > a, > a:hover {
-    //   color: #FFF;
-
-    // }
+    &.sfHover > a, > a:hover {
+      color: #FFF;
+      color: $secondary2;
+       @include transition(0.3s);
+    }
   }
 }
 
@@ -140,7 +145,7 @@
 //--------------------------------------------------------------
 //                        Responsive
 //--------------------------------------------------------------
-@media (max-width: 767px) {
+@media (max-width: 750px) {
   .sf-menu {
     display: none;
   }

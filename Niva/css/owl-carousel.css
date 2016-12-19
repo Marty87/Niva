@@ -196,6 +196,8 @@
   -o-transition: 0.4s;
   -webkit-transition: 0.4s;
   transition: 0.4s; }
+  .item .product {
+    margin: 0 !important; }
 
 .owl-controls {
   position: absolute;

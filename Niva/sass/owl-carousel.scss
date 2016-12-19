@@ -187,6 +187,10 @@
    //  @include transition(0.4s);
    //  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
    // }
+
+   .product {
+      margin :0!important;
+   }
 }
 
 //------------------------------------------------------
@@ -261,6 +265,7 @@
   max-width: 93%;
   margin: 0 auto;
   padding: 40px 0;
+
     .item {
       height: 90px;
 
