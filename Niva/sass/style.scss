@@ -1516,42 +1516,63 @@ dl {
 }
 
 .sort-filtr {
+    display: block;
+    position: relative;
     cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    width: 190px;
+    max-width: 200px;
+    border: 1px solid $secondary5;
+    @include border-radius(5px);
+    @include transition(0.3s);
+    vertical-align: middle;
 
-    .jq-selectbox__select {
-        -webkit-border-top-left-radius: 3px;
-        border-top-left-radius: 3px;
-        -webkit-border-top-right-radius: 3px;
-        border-top-right-radius: 3px;
+    span {
+        font:13px/1.2 $default-font;
         color:$secondary;
-        background: $default;
-        border: 1px solid #e8e8e8;
-        @include border-radius(3px);
-        // @include box-shadow(0 0 2px rgba(0, 0, 0, 0.15));
-        text-shadow:none;
-        font:13px/39px $default-font;
-        height: 40px;
-        width: 200px;
-        padding: 0 10px;
-        white-space: nowrap;
+        vertical-align: middle;
     }
 
-     .jq-selectbox__select-text {
+     &:after {
+      content:"";
+      position: absolute;
+      top: 44%;
+      right: 10px;
+      display: block;
+      width: 8px;
+      height: 5px;
+      background:url('../images/arrow-bottom.png')0px 0px no-repeat;
+      @include transition(0.3s);
+    }
+}
 
+.active-sort {
+    @include transition(0.3s);
+    background: $default;
+    border: none;
+    @include border-radius(0);
+    -webkit-border-top-left-radius: 5px;
+            border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+            border-top-right-radius: 5px;
+    @include box-shadow(0 0 15px rgba(0, 0, 0, 0.1));
+
+      &:after {
+      @include transition(0.3s);
+      background:url('../images/arrow-up.png')0px 0px no-repeat;
     }
 
-    .jq-selectbox__trigger {
-        border: none;
-    }
-
-    .jq-selectbox__trigger-arrow {
+    &:before {
+        content:"";
+        display: block;
+        width: 100%;
+        height: 20px;
         position: absolute;
-        top: 17px;
-        right: 15px;
-        width: 8px;
-        height: 5px;
-        border: none;
-        background: url('../images/arrow-bottom.png') 0 0 no-repeat;
+        top: 100%;
+        left: 0;
+        background: #FFF;
+        // @include box-shadow(0 0 15px rgba(0, 0, 0, 0.1));
     }
 }
 
@@ -1574,7 +1595,7 @@ dl {
     }
 }
 
-.sort-item {
+.filtr-cat {
 
     select {
         display: none;
@@ -1598,6 +1619,7 @@ dl {
 
     .jq-selectbox__select-text {
         width: auto !important;
+        color: #231f20 !important;
     }
 
     .jq-selectbox__trigger {
@@ -1626,7 +1648,7 @@ dl {
                 background: #FFF;
                 font-size: 13px;
                 font-family: $default-font;
-                color:$secondary2;
+                color:$secondary;
                 border-bottom: 1px solid $secondary5;
                 padding: 10px 10px;
                 @include transition(0.3s);
@@ -1756,14 +1778,105 @@ dl {
     @include transition(0.3s);
 }
 
-
 .sort_count {
     .jq-number {
         margin-left: 10px;
     }
 }
 
+/*================== Filtr   ======================*/
+
+.filter-box {
+    @include clearfix();
+    @include border-radius(3px);
+    @include box-shadow(0 0 15px rgba(0, 0, 0, 0.1));
+    background: $default;
+    padding: 20px;
+    display: none;
+    margin-top: 10px;
+}
+
+.catalog_filter .filter {
+    padding-bottom: 10px;
+}
+
+#minCost,
+#maxCost {
+    display: inline-block;
+    font-size: 13px;
+    padding: 10px;
+    width: 48%;
+    max-width: 106px;
+    display: inline-block;
+    height: 38px;
+    border: 1px solid $secondary5;
+    @include border-radius(5px);
+    font-family: $default-font;
+}
+
+.sliderCont {
+     margin: 26px 0 24px 0;
+}
+
+.ui-widget-header {
+    background-color: $accent-clr3;
+}
+
+#slider {
+    max-width: 225px;
+    width: 100%;
+    height: 5px;
+}
+
+.filter .ui-widget-content {
+    background: $secondary5;
+    border: none;
+    -webkit-border-radius: 0;
+            border-radius: 0;
+}
+
+.ui-slider .ui-slider-handle {
+    @include border-radius(50%);
+    width: 15px;
+    height: 15px;
+    background: $default;
+    border: 1px solid $accent-clr3;
+    @include transition(0.3s);
+
+    &:hover {
+        @include transition(0.3s);
+        @include box-shadow(0 0 15px rgba(0, 0, 0, 0.1));
+    }
+}
+
+.formCost {
+
+    white-space: nowrap;
+
+    #maxCost:last-child {
+        margin-left: 7px;
+    }
+}
+
+.filtr-name {
+    margin: 8px 0;
+    font-size: 13px;
+    line-height: 1;
+    font-family: $default-font;
+    display: block;
+}
+
+.filtr-cat {
+    margin: 0 !important;
+    max-width: 225px !important;
+}
+
+.mb50 {
+    margin-bottom: 55px !important;
+}
+
 /*==================  Sidebar  ======================*/
+
 .sidebar-title {
     border: 1px solid #dfdfdf;
     border-bottom: none;
@@ -2194,6 +2307,7 @@ dl {
     min-width: 90px !important;
     max-width: 135px !important;
     background: $accent-clr3;
+    border: none;
     color:$default;
 }
 
@@ -2203,6 +2317,7 @@ dl {
     background: transparent;
     color:$secondary2;
     border: 1px solid $secondary5;
+
 
     &:hover {
         border: 1px solid $secondary;
@@ -3105,6 +3220,8 @@ li.marked-list-item {
 .circle-image {
     @include border-radius(50%);
     border: 1px solid #dfdfdf;
+
+
 }
 
 /*==================    Buttons    ======================*/

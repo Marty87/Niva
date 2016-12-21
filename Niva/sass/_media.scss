@@ -723,7 +723,7 @@
 	}
 
 	.sort_items > li + li {
-		margin-left: 12px;
+		margin-left: 5px;
 	}
 
 	.sort-filtr .jq-selectbox__select {
@@ -829,6 +829,27 @@
 
 	.standard-table2-small {
 		width: 100%;
+	}
+
+	.sel-cat,.filter {
+		max-width: 300px !important;
+		margin: 0 auto !important;
+	}
+
+	#minCost, #maxCost {
+		max-width: 120px;
+	}
+
+	.sort_items {
+		white-space: nowrap;
+	}
+
+	.sort_view span + span {
+		margin-left: 0;
+	}
+
+	.filtr-cat .jq-selectbox__dropdown {
+		max-width: 100%;
 	}
 }
 
